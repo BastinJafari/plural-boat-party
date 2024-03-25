@@ -3,28 +3,42 @@ description: Everything essential for the party, like sound system, managing vol
 title: "[Task Title]: [Brief Description]"
 labels: ["task"]
 body:
-- type: markdown
+
+- type: dropdown
+  id: area
   attributes:
-    value: |
-      ## Task Overview
-      [Provide a detailed description of the task here. Explain what needs to be done and why it's essential for the party.]
-      
-      ## Requirements
-      [List any specific requirements for completing this task, such as budget, time, and necessary skills/resources.]
-      
-      ## Deliverables
-      [Specify the concrete items that must be provided for this task to be considered complete. This could include contracts, receipts, photos, chat messages, etc.]
-      
-      
-- type: checkboxes
-  attributes:
-    label: "Field"
+    label: Area
     options:
-      - label: "Equipment"
-      - label: "Decoration"
-      - label: "Art"
-      - label: "Food"
-      - label: "Coding"
+      - "Equipment"
+      - "Decoration"
+      - "Art"
+      - "Food"
+      - "Coding"
+
+ - type: textarea
+    id: overview
+    attributes:
+      label: Task Overview
+      description: Provide a detailed description of the task here. Explain what needs to be done and why it's essential for the party.
+      placeholder: test
+    validations:
+      required: true
+ - type: textarea
+    id: requirements
+    attributes:
+      label: Requirements
+      description: List any specific requirements for completing this task, such as budget, time, and necessary skills/resources.
+      placeholder: test
+    validations:
+      required: true
+ - type: textarea
+    id: completion_items
+    attributes:
+      label: Completion Items
+      description: Specify the concrete items that must be provided for this task to be considered complete. This could include contracts, receipts, photos, chat messages, etc.
+      placeholder: test
+    validations:
+      required: true
       
 - type: input
   attributes:
