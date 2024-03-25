@@ -1,0 +1,45 @@
+name: Essential Task
+description: Everything essential for the party, like sound system, managing volunteers, defining responsibilities, etc.
+title: "[Task Title]: [Brief Description]"
+labels: ["task"]
+body:
+- type: markdown
+  attributes:
+    value: |
+      ## Task Overview
+      [Provide a detailed description of the task here. Explain what needs to be done and why it's essential for the party.]
+      
+      ## Requirements
+      [List any specific requirements for completing this task, such as budget, time, and necessary skills/resources.]
+      
+      ## Deliverables
+      [Specify the concrete items that must be provided for this task to be considered complete. This could include contracts, receipts, photos, chat messages, etc.]
+      
+      
+- type: checkboxes
+  attributes:
+    label: "Field"
+    options:
+      - label: "Equipment"
+      - label: "Decoration"
+      - label: "Art"
+      - label: "Food"
+      - label: "Coding"
+      
+- type: input
+  attributes:
+    label: "Task Budget"
+  validations:
+    required: true
+    
+- type: input
+  attributes:
+    label: "Task Deadline"
+  validations:
+    required: true
+    
+- type: textarea
+  attributes:
+    label: "Additional Notes"
+  validations:
+    required: false
