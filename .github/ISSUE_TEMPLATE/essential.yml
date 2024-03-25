@@ -3,57 +3,57 @@ description: Everything essential for the party, like sound system, managing vol
 title: "[Task Title]: [Brief Description]"
 labels: ["task"]
 body:
-
-- type: dropdown
-  id: area
-  attributes:
-    label: Area
-    options:
-      - "Equipment"
-      - "Decoration"
-      - "Art"
-      - "Food"
-      - "Coding"
-
- - type: textarea
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - "Equipment"
+        - "Decoration"
+        - "Art"
+        - "Food"
+        - "Coding"
+    validations:
+      required: true
+  - type: textarea
     id: overview
     attributes:
       label: Task Overview
       description: Provide a detailed description of the task here. Explain what needs to be done and why it's essential for the party.
-      placeholder: test
+      placeholder: Describe the task and its importance
     validations:
       required: true
- - type: textarea
+  - type: textarea
     id: requirements
     attributes:
       label: Requirements
       description: List any specific requirements for completing this task, such as budget, time, and necessary skills/resources.
-      placeholder: test
+      placeholder: List task requirements
     validations:
       required: true
- - type: textarea
+  - type: textarea
     id: completion_items
     attributes:
       label: Completion Items
       description: Specify the concrete items that must be provided for this task to be considered complete. This could include contracts, receipts, photos, chat messages, etc.
-      placeholder: test
+      placeholder: List items needed for task completion
     validations:
       required: true
-      
-- type: input
-  attributes:
-    label: "Task Budget"
-  validations:
-    required: true
-    
-- type: input
-  attributes:
-    label: "Task Deadline"
-  validations:
-    required: true
-    
-- type: textarea
-  attributes:
-    label: "Additional Notes"
-  validations:
-    required: false
+  - type: input
+    id: budget
+    attributes:
+      label: "Task Budget"
+    validations:
+      required: true
+  - type: input
+    id: deadline
+    attributes:
+      label: "Task Deadline"
+    validations:
+      required: true
+  - type: textarea
+    id: additional_notes
+    attributes:
+      label: "Additional Notes"
+    validations:
+      required: false
